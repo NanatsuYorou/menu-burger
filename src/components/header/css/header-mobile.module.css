@@ -26,7 +26,7 @@ header {
 }
 
 .header__logo {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .header__logo img {
@@ -36,8 +36,17 @@ header {
 
 .header__menu {
   position: relative;
-  height: 30px;
-  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  height: 100%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
   color: #636363;
 }
@@ -100,7 +109,7 @@ header {
   padding: 10px 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 15px;
+  border-radius: 10px;
   margin-bottom: 5px;
 }
 
@@ -113,6 +122,7 @@ header {
 }
 
 .menu__burger {
+  width: 30px;
   position: fixed;
   cursor: pointer;
 }
@@ -140,4 +150,59 @@ header {
   opacity: 1;
   max-height: 500px;
 }
-/*# sourceMappingURL=header.module.css.map */
+
+@media (min-width: 767px) {
+  .header__container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .menu__list {
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 0 0 0 50px;
+    margin: 0;
+    right: auto;
+    top: auto;
+    background-color: transparent;
+    overflow: hidden;
+  }
+  .menu__list li:last-child {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .menu__item:last-child {
+    margin-left: auto;
+  }
+  .menu__item:last-child a {
+    width: 100px;
+    padding: 5px 15px;
+    margin: 0;
+  }
+  .menu__item:last-child p.open {
+    margin-top: 100px;
+  }
+  .menu__burger {
+    display: none;
+  }
+  .sublist {
+    background-color: #fff;
+    margin-top: 140px;
+    margin-bottom: 20px;
+    padding: 0 30px 10px 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 10px -2px #000;
+            box-shadow: 0 0 10px -2px #000;
+  }
+}
+/*# sourceMappingURL=header-mobile.module.css.map */

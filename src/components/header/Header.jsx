@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from '../../images/logo.svg'
-import css from  './css/header.module.css'
+import css from  './css/header-mobile.module.css'
 import menuSVG from '../../images/icon-menu.svg'
 import closeMenuSVG from '../../images/icon-close-menu.svg'
 import arrowSVG from '../../images/icon-arrow-down.svg'
