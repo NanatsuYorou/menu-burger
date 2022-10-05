@@ -6,12 +6,12 @@ main{
 }
 
 .background{
-    width: 100%;
-    height: auto;
     img{
         width: 100%;
         height: auto;
     }
+    width: 100%;
+    height: calc(100%);
 }
 
 h2{
@@ -22,7 +22,7 @@ h2{
 
 p{
     text-align: center;
-    color: #636363;
+    color: grey;
 }
 
 section{
@@ -60,4 +60,26 @@ footer{
         width: 20%;
         height: 100%;
     }
+}
+
+@media (min-width: 767px) {
+ main{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    .background{
+        width: 40%;
+        height: 100%;
+    }
+    section{
+        margin: 0;
+        width: 40%;
+        height: 100%;
+        h2{
+            font-size: 32px;
+        }
+    }
+ }       
 }
