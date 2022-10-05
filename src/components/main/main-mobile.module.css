@@ -7,7 +7,7 @@ main {
 
 .background {
   width: 100%;
-  height: calc(100%);
+  height: 100%;
 }
 
 .background img {
@@ -90,6 +90,9 @@ footer img {
             flex-direction: row-reverse;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%;
     width: 100%;
   }
