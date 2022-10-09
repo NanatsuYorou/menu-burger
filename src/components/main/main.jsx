@@ -11,16 +11,18 @@ export const Main = () => {
 
     const [mobileDevice, changeToMobile] = useState(null)
 
-    // Не работает динамическая смена картинки, подправить
-    useEffect(()=>{
-        if(window.innerWidth >= '767'){
-            console.log("it's a desktop width")
+    function handleResize(){
+        if(window.innerWidth >= 767){
             changeToMobile(false)
         } else{
-            console.log("it's a mobile width")
             changeToMobile(true)
         }
-    }, [window.innerWidth])
+    }
+
+    // Не работает динамическая смена картинки, подправить
+    useEffect(()=>{
+        window.addEventListener("resize", handleResize)
+    }, [])
 
     return(
         <main>
